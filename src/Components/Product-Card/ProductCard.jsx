@@ -8,7 +8,7 @@ const ProductCard = ({ item, addToCartBtn }) => {
   const navigate = useNavigate();
 
   const handleBuyNow = () => {
-    addToCart(item._id, item.price, item);
+    addToCart(item.id, item.product_price, item);
     navigate("/cart");
   };
 

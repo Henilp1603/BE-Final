@@ -52,23 +52,23 @@ const NavBar = ({logo=true,toggleS=true,navItem=true}) => {
       </div>
       <div className="mobile_nav">
         <div className="nav_icons">
-          <a href="#">
+          <Link to="/" >
             <i className="ri-home-line icon"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/contact" >
             <i className="ri-phone-line icon"></i>
-          </a>
+          </Link>
           <img
             src="/img/mobile-logo.png"
             alt="sfs"
             className="mobile_logo_img"
           />
-          <a href="#">
+          <Link to="/cart" >
             <i className="ri-shopping-cart-line icon"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/" >
             <i className="ri-menu-3-line icon"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -37,8 +37,7 @@ const CartPage = () => {
 
     const url =
       "https://api.telegram.org/bot6686135672:AAHItUhcnEXnzDSLMbSz1FBuEUoUdyHqDjs/sendMessage";
-    // const cartdata = JSON.stringify(cart.map((e) => e.product_name));
-    // console.log(cartdata);
+    
     const { data: res } = await axios.post(url, {
       chat_id: 909397041,
       text: `Customer Details\n\nName: ${data.name},\nPhone: ${
@@ -148,7 +147,7 @@ const CartPage = () => {
               <textarea
                 name="address"
                 id="address"
-                rows="2"
+                rows="3"
                 className="single_textarea_inp"
                 onChange={handleInp}
               ></textarea>
