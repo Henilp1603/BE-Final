@@ -1,0 +1,35 @@
+.footer {
+    background-color: #ff8f3e;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .footer_logo_img {
+    height: 2rem;
+  }
+  
+  .footer_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer_text {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .circle {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .scrollUp{
+    transition: 0.4s;
+  }

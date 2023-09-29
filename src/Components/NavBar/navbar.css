@@ -1,0 +1,155 @@
+.nav_conatiner {
+  width: fit-content;
+  height: 80px;
+}
+
+.website_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 60px;
+  background-color: white;
+}
+
+.mobile_nav {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.logo_sec {
+  display: flex;
+}
+
+.logo_name {
+  font-size: 1.3rem;
+  font-weight: 1000;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ff6b00;
+  padding-left: 0.3rem;
+}
+
+.logo_img {
+  height: 3rem;
+}
+
+.nav_items_ul {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav_item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #8e8e8e;
+}
+
+.active {
+  font-weight: 600;
+  color: #4b4b4b;
+}
+
+.btn {
+  padding: 14px 20px;
+  border-radius: 3rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.9375rem;
+  background: linear-gradient(200deg, #ff6b00 0%, #ffb47e 100%);
+  box-shadow: 0px 3px 25px 1px rgba(253, 116, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.5s ease;
+}
+
+#cart_btn {
+  display: none;
+}
+.qute_btn{
+  position: relative;
+}
+.num_cir{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 904px) {
+  html {
+    font-size: 40%;
+  }
+
+  .website_nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    padding-top: 2.6rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav_icons {
+    background: linear-gradient(0deg, #ffa253 0%, #fd7400 100%);
+    box-shadow: 0px 3px 14px 1px rgba(0, 0, 0, 0.16);
+    padding: 2.3rem 3rem;
+    width: 85%;
+    border-radius: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .mobile_logo_img {
+    height: 4rem;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 904px) and (max-width: 1040px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media only screen and (min-width: 1040px) and (max-width: 1182px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (min-width: 1182px) and (max-width: 1400px) {
+  html {
+    font-size: 85%;
+  }
+}
