@@ -66,7 +66,7 @@ const NavBar = ({logo=true,toggleS=true,navItem=true}) => {
           <Link to="/cart" >
             <i className="ri-shopping-cart-line icon"></i>
           </Link>
-          <Link to="/" >
+          <Link to="/productpage" >
             <i className="ri-menu-3-line icon"></i>
           </Link>
         </div>
