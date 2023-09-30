@@ -106,6 +106,8 @@
   color: black;
   box-shadow: none;
   font-weight: 500;
+  user-select: none;
+  -webkit-user-select: none;
  }
 
  .buy_btn{

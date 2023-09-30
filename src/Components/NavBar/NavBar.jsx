@@ -71,7 +71,15 @@ const NavBar = ({logo = true, toggleS = true, navItem = true}) => {
             <i class="ri-store-3-line icon"></i>
           </NavLink>
           <NavLink to="/cart">
-            <i className="ri-shopping-cart-line icon"></i>
+            <div className="cart_div">
+            <i className="ri-shopping-cart-line icon cart_icon">
+            </i>
+            {total_item !== 0 ? (
+                      <span className="num_cir_mob">{total_item}</span>
+                    ) : (
+                      <span></span>
+                    )}
+           </div>
           </NavLink>
         </div>
       </div>

@@ -100,6 +100,8 @@
 
 
 
+
+
 @media screen and (max-width: 904px) {
   html {
     font-size: 40%;
@@ -130,6 +132,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   .icon {
@@ -154,6 +157,26 @@
   .active:hover{
     background-color: white;
     color: #4b4b4b;
+  }
+
+  .cart_div{
+    /* background-color: red; */
+    position: relative;
+  }
+  .num_cir_mob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top:12px;
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
   }
 
 }
