@@ -50,9 +50,13 @@
   color: #8e8e8e;
 }
 
+
+
 .active {
-  font-weight: 600;
   color: #4b4b4b;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.3rem 0;
 }
 
 .btn {
@@ -94,9 +98,12 @@
   font-weight: 500;
 }
 
+
+
 @media screen and (max-width: 904px) {
   html {
     font-size: 40%;
+    cursor: none;
   }
 
   .website_nav {
@@ -136,6 +143,19 @@
     height: 4rem;
     padding: 0 2rem;
   }
+
+  .active {
+    color: #4b4b4b;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.3rem 0;
+  }
+
+  .active:hover{
+    background-color: white;
+    color: #4b4b4b;
+  }
+
 }
 
 @media only screen and (min-width: 904px) and (max-width: 1040px) {

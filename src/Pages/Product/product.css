@@ -47,3 +47,75 @@
     transition: all 0.5s ease;
   }
   
+
+  @media screen and (max-width: 904px) {
+    html {
+      font-size: 60%;
+    }
+   .product_list{
+    grid-template-columns: 1fr;
+   }
+
+  .product_card{
+    width: 85%;
+    padding: 2.5rem;
+    background-color: #f3f3f3;
+
+  } 
+.product_page_heading{
+  font-size: 5rem;
+}
+.product_img_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .product_img{
+    width: 90%;
+    height: 90%;
+    border-radius: 0;
+  }
+ 
+  .product_name_price{
+    padding: 0 1rem;
+  }
+
+  .product_name{
+    font-size: 2.5rem;
+  }
+  .product_price{
+    font-size: 1.9rem;
+    font-weight: 500;
+  }
+ .product_disc{
+  font-size: 1.4rem;
+  padding: 0.5rem;
+ }
+
+ .product_buy_btn_div{
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 2rem;
+ }
+
+ .add_to_cart_btn{
+  font-size: 2rem;
+  border:1px solid black;
+  background: transparent;
+  color: black;
+  box-shadow: none;
+  font-weight: 500;
+ }
+
+ .buy_btn{
+  font-size: 2rem;
+  font-weight: 500;
+ }
+
+ .product_page_btn{
+  font-size: 2rem;
+  margin: 2rem;
+ }
+  
+}

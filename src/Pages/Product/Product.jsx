@@ -7,7 +7,7 @@ import ProductData from "../../assets/ProductData.js";
 import { Link, NavLink } from "react-router-dom";
 
 const Product = () => {
-  const { products } = useProductContext();
+
   return (
     <>
       <section className="product_page_section section">

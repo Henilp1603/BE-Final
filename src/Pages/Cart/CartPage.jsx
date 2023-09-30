@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./cart.css";
-import { useCartContext } from "../../Contexts/CartContext";
+import {useCartContext} from "../../Contexts/CartContext";
 import CartProduct from "../../Components/CartProducts/CartProduct";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const CartPage = () => {
-  let { cart, total_item, total_price, deleteCart } = useCartContext();
+  let {cart, total_item, total_price, deleteCart} = useCartContext();
   const navigate = useNavigate();
   console.log("cart", cart);
 
@@ -20,7 +20,7 @@ const CartPage = () => {
   });
 
   const handleInp = (e) => {
-    const { value, name } = e.target;
+    const {value, name} = e.target;
 
     setData(() => {
       return {
@@ -35,22 +35,35 @@ const CartPage = () => {
   const handleCheckout = async (e) => {
     e.preventDefault();
 
-    const url =
-      "https://api.telegram.org/bot6686135672:AAHItUhcnEXnzDSLMbSz1FBuEUoUdyHqDjs/sendMessage";
-    
-    const { data: res } = await axios.post(url, {
-      chat_id: 909397041,
-      text: `Customer Details\n\nName: ${data.name},\nPhone: ${
-        data.phone
-      },\nEmail: ${data.email},\nAddress: ${
-        data.address
-      },\n\nProducts Details: {${cart.map(
-        (e) => `\n${e.product_name}(${e.quantity}) Price:${e.price}`
-      )}\n} `,
-    });
-    if (res) {
-      deleteCart();
-      navigate("/");
+    if (
+      data.name == "" ||
+      data.email == "" ||
+      data.phone == "" ||
+      data.address == ""
+    ) {
+      alert("All Fields Are Mandatory");
+    } else {
+      const url =
+        "https://api.telegram.org/bot6686135672:AAHItUhcnEXnzDSLMbSz1FBuEUoUdyHqDjs/sendMessage";
+
+      try {
+        const {data: res} = await axios.post(url, {
+          chat_id: 909397041,
+          text: `Customer Details\n\nName: ${data.name},\nPhone: ${
+            data.phone
+          },\nEmail: ${data.email},\nAddress: ${
+            data.address
+          },\n\nProducts Details: {${cart.map(
+            (e) => `\n${e.product_name}(${e.quantity}) Price:${e.price}`
+          )}\n} `,
+        });
+        if (res.ok) {
+          deleteCart();
+          navigate("/");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -114,6 +127,7 @@ const CartPage = () => {
                 name="name"
                 className="single_inp"
                 onChange={handleInp}
+                required
               />
             </div>
             <div className="form_inp">
@@ -126,6 +140,7 @@ const CartPage = () => {
                 name="phone"
                 className="single_inp"
                 onChange={handleInp}
+                required
               />
             </div>
             <div className="form_inp">
@@ -138,6 +153,7 @@ const CartPage = () => {
                 name="email"
                 className="single_inp"
                 onChange={handleInp}
+                required
               />
             </div>
             <div className="form_inp">
@@ -150,6 +166,7 @@ const CartPage = () => {
                 rows="3"
                 className="single_textarea_inp"
                 onChange={handleInp}
+                required
               ></textarea>
             </div>
           </div>
