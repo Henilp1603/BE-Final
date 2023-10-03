@@ -3,7 +3,11 @@
     position: relative;
     margin: 0 1.25rem;
   }
-  
+  .cart_img_div{
+    border-radius: 1rem;
+    background-color:#f9f9f9;
+    margin-bottom: 10px;
+  }
   .checkout_product_img {
     width: 12.5rem;
     height: 11rem;

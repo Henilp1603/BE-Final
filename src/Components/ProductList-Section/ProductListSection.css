@@ -34,6 +34,14 @@
   .product_name_price {
     margin-top: 5px;
     margin-bottom: 0.625rem;
+    /* height: min(70px); */
+  }
+
+  .product_name{
+    height: min(50px);
+  }
+  .product_detail_div{
+    height: min(130px);
   }
   
   .product_disc_div {
@@ -61,14 +69,14 @@
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 3.1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 
   .add_to_cart_btn {
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 2.5rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 
   .product_img_div{
@@ -109,6 +117,14 @@
   
     .heading_div {
       width: 45rem;
+    }
+
+    .product_name{
+      height: min(30px);
+      margin-top: 14px;
+    }
+    .product_detail_div{
+      height: min(80px);
     }
   }
   

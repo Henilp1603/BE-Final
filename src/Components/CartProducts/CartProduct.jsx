@@ -7,7 +7,7 @@ const CartProduct = ({ item }) => {
   console.log(item);
   return (
     <div className="checkout_product">
-      <img src={`${item.image}`} alt="" className="checkout_product_img" />
+     <div className="cart_img_div"> <img src={`${item.image}`} alt="" className="checkout_product_img" /></div>
       <div className="checkout_product_name_price">
         <h2 className="checkout_product_name">{item.product_name}</h2>
         <h3 className="checkout_product_price">₹{item.price}</h3>

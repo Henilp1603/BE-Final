@@ -1,9 +1,9 @@
 import React from "react";
-import { useCartContext } from "../../Contexts/CartContext";
-import { useNavigate } from "react-router-dom";
+import {useCartContext} from "../../Contexts/CartContext";
+import {useNavigate} from "react-router-dom";
 
-const ProductCard = ({ item, addToCartBtn }) => {
-  const { addToCart } = useCartContext();
+const ProductCard = ({item, addToCartBtn}) => {
+  const {addToCart} = useCartContext();
 
   const navigate = useNavigate();
 
@@ -17,12 +17,14 @@ const ProductCard = ({ item, addToCartBtn }) => {
       <div className="product_img_div">
         <img src={`${item.product_img}`} alt="pro-1" className="product_img" />
       </div>
-      <div className="product_name_price">
-        <h2 className="product_name">{item.product_name}</h2>
-        <h3 className="product_price">{`Price : Rs ${item.product_price}/card`}</h3>
-      </div>
-      <div className="product_disc_div">
-        <p className="product_disc">{item.product_disc}</p>
+      <div className="product_detail_div">
+        <div className="product_name_price">
+          <h2 className="product_name">{item.product_name}</h2>
+          <h3 className="product_price">{`Price : Rs ${item.product_price}/card`}</h3>
+        </div>
+        <div className="product_disc_div">
+          <p className="product_disc">{item.product_disc}</p>
+        </div>
       </div>
       <div className="product_buy_btn_div">
         {addToCartBtn && (
