@@ -84,7 +84,7 @@ const CartPage = () => {
             <h2>Confirm your order</h2>
             <h4>{total_item} Items</h4>
           </span>
-          <h2>${total_price}</h2>
+          <h2>₹{ total_price}</h2>
         </div>
         {total_item == 0 ? (
           <div className="no_item_cart_div">
@@ -107,8 +107,7 @@ const CartPage = () => {
       </div>
       <div className="checkout_right">
         <div className="checkout_right_nav">
-          <Link to="/">
-            {" "}
+          <Link to="/productpage">
             <span className="nav_icon_circle">
               <i className="ri-close-circle-fill checkout_right_icon"></i>
             </span>

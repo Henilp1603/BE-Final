@@ -71,6 +71,13 @@
     margin-bottom: 1rem;
   }
 
+  .product_img_div{
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+
   .product_img{
     width: 16.875rem;
     height: 12.5rem;
