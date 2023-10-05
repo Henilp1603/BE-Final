@@ -6,6 +6,22 @@ import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 
 const CartPage = () => {
+  const [namefocus,setNameFocus]=useState(false)
+  const [phonefocus,sePhoneFocus]=useState(false)
+  const [emailfocus,setEmailFocus]=useState(false)
+
+
+  const handelFocN=(e)=>{
+    setNameFocus(true)
+  }
+
+  const handelFocP=(e)=>{
+    sePhoneFocus(true)
+  }
+
+  const handelFocE=(e)=>{
+    setEmailFocus(true)
+  }
   let {cart, total_item, total_price, deleteCart} = useCartContext();
   const navigate = useNavigate();
   console.log("cart", cart);
@@ -31,6 +47,8 @@ const CartPage = () => {
       };
     });
   };
+
+  
 
   const handleCheckout = async (e) => {
     e.preventDefault();
@@ -66,6 +84,7 @@ const CartPage = () => {
       }
     }
   };
+
 
   return (
     <section className="checkout_section">
@@ -126,8 +145,11 @@ const CartPage = () => {
                 name="name"
                 className="single_inp"
                 onChange={handleInp}
+                onBlur={handelFocN}
+                focused={namefocus.toString()}
                 required
               />
+              <span className="Inp_err_msg">*Name is Required</span>
             </div>
             <div className="form_inp">
               <label for="name" className="form_label">
@@ -139,8 +161,11 @@ const CartPage = () => {
                 name="phone"
                 className="single_inp"
                 onChange={handleInp}
+                onBlur={handelFocP}
+                focused={phonefocus.toString()}
                 required
               />
+              <span className="Inp_err_msg">*Phone No. is Required</span>
             </div>
             <div className="form_inp">
               <label for="name" className="form_label">
@@ -152,8 +177,11 @@ const CartPage = () => {
                 name="email"
                 className="single_inp"
                 onChange={handleInp}
+                onBlur={handelFocE}
+                focused={emailfocus.toString()}
                 required
               />
+              <span className="Inp_err_msg">*Email is Required</span>
             </div>
             <div className="form_inp">
               <label for="address" className="form_label">
